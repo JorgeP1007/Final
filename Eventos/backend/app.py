@@ -4,7 +4,7 @@ from models import db, Event, StudentRegistration
 from datetime import datetime
 from functools import wraps
 
-# Inicializar Flask con rutas correctas para templates y archivos estáticos
+
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
 # Configuración de la base de datos
@@ -17,12 +17,12 @@ db.init_app(app)
 def home():
     return render_template('index.html')
 
-# Ruta para administradores (opcional, puedes agregar protección si quieres)
+# Ruta para administradores
 @app.route('/admin')
 def admin_panel():
     return render_template('admin.html')
 
-# Decorador para administradores
+
 def require_admin(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
@@ -31,7 +31,7 @@ def require_admin(f):
         return f(*args, **kwargs)
     return wrapper
 
-# Decorador para estudiantes
+
 def require_student(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
@@ -41,8 +41,6 @@ def require_student(f):
     return wrapper
 
 
-
-# Endpoints API
 
 @app.route('/events', methods=['GET'])
 def get_events():
