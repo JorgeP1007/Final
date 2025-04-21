@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Administración{% endblock %}
+{% block content %}
+
+<a href="/" class="admin-link">Volver a la vista de usuario</a>
+
+<h2>Panel de Administración</h2>
+
+<div style="margin-bottom: 20px;">
+    <button>Crear Nuevo Evento</button>
+    <button>Cerrar Sesión</button>
+</div>
+
+<h3>Eventos Programados</h3>
+
+<div class="event-card">
+    <h4>Nombre del Evento</h4>
+    <p><strong>Fecha:</strong> 2025-05-10</p>
+    <p><strong>Lugar:</strong> Universidad Central</p>
+    <p><strong>Tipo:</strong> Voluntariado</p>
+    <p><strong>Descripción:</strong> Breve descripción del evento...</p>
+</div>
+
+<h3>Nuevo Evento</h3>
+
+<form>
+    <input type="text" placeholder="Nombre del evento">
+    <textarea placeholder="Descripción"></textarea>
+    <input type="datetime-local">
+    <input type="text" placeholder="Lugar">
+    <select>
+        <option value="Voluntariado">Voluntariado</option>
+        <option value="Campaña">Campaña</option>
+    </select>
+    <button>Guardar</button>
+    <button type="reset">Cancelar</button>
+</form>
+
+{% endblock %}
