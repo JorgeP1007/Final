@@ -21,8 +21,7 @@ Este proyecto es una aplicación web desarrollada con **Flask** que permite a lo
 - **Python 3** y **Flask** para el backend.
 - **HTML5** y **CSS3** para el diseño de las vistas.
 - **JavaScript** para interacciones dinámicas.
-- **Bootstrap** (opcional) para mejorar el estilo visual.
 - **SQLite** o archivo JSON para almacenamiento básico (según configuración).
 
-## Estructura del Proyecto
+
 
